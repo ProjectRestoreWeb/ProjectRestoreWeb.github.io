@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Project Restore</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body style="overflow-x:hidden;">
+
+<nav class="navbar sticky-top navbar-light bg-light">
+    <span class="navbar-brand mb-0 h1">Project Restore</span>
+</nav>
+
+
+<div id="displayImg" class="py-3">
+    <div class="img row">
+        <div class="col-6 px-0">
+            <img src="temp/vertical1.png" class="img-fit">
+        </div>
+        <div class="col-6">
+            <h1>Name</h1>
+            <h3>Description</h3>
+            <a href="temp/vertical1.png" target="_blank">View in new window</a>
+        </div>
+    </div>
+    <div class="img row">
+        <div class="col-6 px-0">
+            <img src="temp/landscape.jpg" class="img-fit">
+        </div>
+        <div class="col-6">
+            <h1>Name</h1>
+            <h3>Description</h3>
+            <a href="temp/vertical.jpg" target="_blank">View in new window</a>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<script src="https://www.gstatic.com/firebasejs/5.10.0/firebase.js"></script>
+
+<script>
+    var config = {
+        apiKey: "AIzaSyDwmHW2GbuxcEOESdICcICULkmSbty25Mc",
+        authDomain: "project-restore-73cd4.firebaseapp.com",
+        databaseURL: "https://project-restore-73cd4.firebaseio.com",
+        projectId: "project-restore-73cd4",
+        storageBucket: "project-restore-73cd4.appspot.com",
+        messagingSenderId: "255065765593"
+    };
+    firebase.initializeApp(config);
+    var storage = firebase.storage();
+
+    var db = firebase.firestore();
+
+
+</script>
+<script src="js/main.js"></script>
+</body>
+</html>
