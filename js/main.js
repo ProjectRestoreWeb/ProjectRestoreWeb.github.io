@@ -12,6 +12,37 @@ $("#refresh-button").on("mouseup touchend", function(e) {
   $(this).removeClass("activeRefresh");
 })
 
+$("#add-image").on("click", function(e){
+  e.preventDefault();
+  toggleAddImage();
+})
+
+var addImageVisible = false;
+function toggleAddImage() {
+  addImageVisible = !addImageVisible;
+  document.getElementById("add-image-display").style.display = (addImageVisible)?"block":"none";
+}
+
+$("#add-image-Img").change(function(e){
+  console.log($(this).val());
+});
+
+$("#add-image-submit").on('click', function(e) {
+    e.preventDefault();
+    var name = document.getElementById("add-image-name").value;
+    var des =  document.getElementById("add-image-description").value;
+    var file =  document.getElementById("add-image-Img").files[0];
+    var fileN =  document.getElementById("add-image-Img").files[0].name;
+    document.getElementById("add-image-name").value = "";
+    document.getElementById("add-image-description").value = "";
+    document.getElementById("add-image-Img").value = "";
+    toggleAddImage();
+    //TODO change file.name so its the uid
+    storage.ref().child(file.name).put(file).then(function(snapshot) {
+      //TODO add the file ref in firestore
+    });
+});
+
 var imgArr = [];
 var uid = "user1";
 function getAllImages(callback) {

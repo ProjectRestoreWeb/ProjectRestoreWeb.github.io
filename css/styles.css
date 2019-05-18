@@ -5,6 +5,58 @@ body {
   overflow: scroll;
 }
 
+#add-image {
+  position:fixed;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 25px;
+  line-height: 46px;
+  text-align: center;
+  border: 2px solid black;
+  bottom: 5%;
+  right: 5%;
+  z-index:1;
+}
+
+#add-image:hover {
+  color:#8e8e8e;
+  border: 2px solid #8e8e8e;
+  cursor: pointer;
+}
+
+#add-image-display {
+  background-color: #a7e084;
+    position: fixed;
+    width: 80%;
+    height: 80%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px 150px;
+}
+
+#add-image-submit {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 150px;
+  padding: 10px 20px;
+  font-size:25px;
+  background-color: white;
+  border:2px solid #84e08f;
+  border-radius: 15px;
+}
+
+#add-image-submit:hover {
+  cursor: pointer;
+  background: #eaeaea;
+}
+#add-image-submit:focus {
+  outline:none;
+}
+
+
 #refresh-button {
   border: none;
   background-color: #f96675;
