@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <title>Project Restore</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/restore.css">
+    
 </head>
 
 <nav class="navbar sticky-top navbar-light bg-light">
@@ -31,13 +32,20 @@
 
     var db = firebase.firestore();
 </script>
-<script src="js/login.js"></script>
 
 <body>
-
-
-
-
+  
+  <div id="container">
+    <label for="email">Username</label>
+    <input type="text" name="email" id="email">
+    
+    <label for="password">Password</label>
+    <input type="text" name="password" id="password">
+    
+    <input type="submit" id="submit_form">
+  </div>
+  
+  <script src="js/login.js"></script>
 
 </body>
 
